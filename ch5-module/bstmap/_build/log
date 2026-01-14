@@ -1,0 +1,54 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/hsin/.cache/dune/db
+# Workspace root: /home/hsin/code/ocaml/ch5-module/bstmap
+# Auto-detected concurrency: 16
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/hsin/.opam/default/bin/ocamlc.opt -config > /tmp/dune_1d3fd2_output
+$ (cd _build/default/test && ./test_bstmap.exe)
+> Running Bstmap tests...
+>
+> ✓ test_empty passed
+> ✓ test_is_empty passed
+> ✓ test_add_find passed
+> ✓ test_add_update passed
+> ✓ test_mem passed
+> ✓ test_find_not_found passed
+> ✓ test_remove passed
+> ✓ test_remove_root passed
+> ✓ test_remove_nonexistent passed
+> ✓ test_iter_order passed
+> ✓ test_many_elements passed
+>
+> ✓ All tests passed!
+$ (cd _build/default/test && ./test_bstmap_full.exe)
+> Running Bstmap tests...
+>
+> ✓ test_empty passed
+> ✓ test_is_empty passed
+> ✓ test_add_find passed
+> ✓ test_add_update passed
+> ✓ test_mem passed
+> ✓ test_find_not_found_empty passed
+> ✓ test_find_not_found_nonempty passed
+> ✓ test_remove passed
+> ✓ test_remove_two_children passed
+> ✓ test_remove_root_simple passed
+> ✓ test_remove_nonexistent passed
+> ✓ test_remove_empty passed
+> ✓ test_iter_inorder passed
+> ✓ test_iter_empty passed
+> ✓ test_mem_consistency passed
+> ✓ test_add_then_remove passed
+> ✓ test_many_elements passed
+>
+> ✓ All tests passed!

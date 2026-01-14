@@ -1,0 +1,7 @@
+(test
+ (name test_bstmap)
+ (libraries bstmap))
+
+(test
+ (name test_bstmap_full)
+ (libraries bstmap))
